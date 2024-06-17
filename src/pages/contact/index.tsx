@@ -16,7 +16,7 @@ const Contact = () => {
                     <div className='bg-[#F4F3EF] grid grid-cols-12 items-center pt-36 px-[75px]'>{/*px-[75px] */}
                         <div className='col-span-6 bg-white text-center p-20'>
                             <div className='text-4xl font-bold text-[#107070] py-10'>Contact</div>
-                            <div className='flex justify-center items-center gap-6 text-center py-4'>
+                            <div className='flex justify-center items-center gap-6 text-center py-4 pl-16'>
                                 <div>Tel: 123-456-7890 </div>
                                 <div>|</div>
                                 <div>info@my-domain.com </div>
@@ -38,7 +38,7 @@ const Contact = () => {
                                 <div><InstagramIcon /> Instagram</div>
                             </div>
                         </div>
-                        <div className='col-span-6'><img className='' src="https://wallpapers.com/images/hd/dramatic-side-profile-of-chris-bumstead-1f490ym8l788gktn.jpg" alt="" /></div>
+                        <div className='col-span-6'><img className='' loading="lazy" src="https://wallpapers.com/images/hd/dramatic-side-profile-of-chris-bumstead-1f490ym8l788gktn.jpg" alt="" /></div>
                     </div>
                     <Footer />
                 </div>

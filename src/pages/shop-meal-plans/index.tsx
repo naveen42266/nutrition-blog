@@ -26,7 +26,7 @@ const ShopMealPlans = () => {
                                     return (
                                         <div className='col-span-4' key={each} onMouseEnter={() => setHover({ id: each, isHover: true })} onMouseDown={() => setHover({ id: 0, isHover: false })}>
                                             <div className='relative'>
-                                                <img className='w-full' src="https://static.wixstatic.com/media/5305c5_f9ddc40b66ce4475a2b3509fb5e137f4~mv2_d_5995_4912_s_4_2.jpg/v1/fill/w_305,h_305,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5305c5_f9ddc40b66ce4475a2b3509fb5e137f4~mv2_d_5995_4912_s_4_2.jpg" alt="" />
+                                                <img className='w-full' loading="lazy" src="https://static.wixstatic.com/media/5305c5_f9ddc40b66ce4475a2b3509fb5e137f4~mv2_d_5995_4912_s_4_2.jpg/v1/fill/w_305,h_305,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5305c5_f9ddc40b66ce4475a2b3509fb5e137f4~mv2_d_5995_4912_s_4_2.jpg" alt="" />
                                                 <VerticalAlignBottomIcon fontSize='large' className='absolute top-4 right-4 text-slate-700 rounded-full bg-white opacity-50 p-1.5' />
                                                 {hover.id == each && hover.isHover && <div className='absolute bottom-0 right-0 left-0 bg-white opacity-65 py-4 text-black'>Quick View</div>}
                                             </div>

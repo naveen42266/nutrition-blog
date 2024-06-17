@@ -39,7 +39,7 @@ const Header = () => {
                     </div>
                     <div className='flex justify-end gap-6'>
                         {["Home", "About", "What is Keto", "Recipes", "Lifestyle", "Shop Meal Plans", "Contact"].map((each) => (
-                            <Link to={handleRouter(each)}><div key={each}>{each}</div></Link>
+                            <Link key={each} to={handleRouter(each)}><div>{each}</div></Link>
                         ))}
                     </div>
                 </div>

@@ -7,6 +7,7 @@ import Recipes from './pages/recipes';
 import Lifestyle from './pages/lifestyle';
 import ShopMealPlans from './pages/shop-meal-plans';
 import Contact from './pages/contact';
+import Post from './pages/post';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/Lifestyle' element={<Lifestyle/>}></Route>
         <Route path='/shop-meal-plans' element={<ShopMealPlans/>}></Route>
         <Route path='/contact' element={<Contact/>}></Route>
+        <Route path='/post/:postid' element={<Post/>}></Route>
       </Routes>
     </BrowserRouter>
   )
