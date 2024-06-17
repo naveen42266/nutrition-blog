@@ -7,7 +7,10 @@ const Header = () => {
             return "/"
         }
         else if(each.toLowerCase() == "what is keto"){
-            return "/keto"
+            return "/what-is-keto"
+        }
+        else if(each.toLowerCase() == "shop meal plans"){
+            return "/shop-meal-plans"
         }
         return '/' + each.toLowerCase()
     }

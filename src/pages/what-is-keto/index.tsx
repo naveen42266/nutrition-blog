@@ -16,8 +16,8 @@ const Keto = () => {
                 <div className='absolute top-0 left-0 right-0'>
                     <div className='bg-[#F4F3EF] px-[75px]'>
                         <div className='items-center pt-36' >
-                            <div className="relative"><img src="https://cdn.britannica.com/87/234287-050-61908AB8/Ketogenic-diet-Cuisine-food.jpg" alt="" />
-                                <div className='absolute top-[35%] left-[30%] right-[30%] z-20 bg-white py-[40px]'>
+                            <div className="relative h-[500px]"><img className='h-[500px] w-full object-cover' src="https://static.wixstatic.com/media/5305c5_1587ccb439c8461e88264a2237e11b23~mv2_d_6048_4032_s_4_2.jpg/v1/fill/w_980,h_730,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5305c5_1587ccb439c8461e88264a2237e11b23~mv2_d_6048_4032_s_4_2.jpg" alt="" />
+                                <div className='absolute top-[35%] left-[30%] right-[30%] z-10 bg-white py-[40px]'>
                                     <div className='text-5xl text-[#107070] font-bold text-center'>What is Keto</div>
                                 </div>
                             </div>
