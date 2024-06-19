@@ -8,6 +8,10 @@ import Lifestyle from './pages/lifestyle';
 import ShopMealPlans from './pages/shop-meal-plans';
 import Contact from './pages/contact';
 import Post from './pages/post';
+import Blog from './pages/blog';
+import RecipesCategories from './pages/blog/categories/recipes';
+import WhatIsKetoCategories from './pages/blog/categories/what-is-keto';
+import LifestyleCategories from './pages/blog/categories/lifestyle';
 
 function App() {
   return (
@@ -21,6 +25,10 @@ function App() {
         <Route path='/shop-meal-plans' element={<ShopMealPlans/>}></Route>
         <Route path='/contact' element={<Contact/>}></Route>
         <Route path='/post/:postid' element={<Post/>}></Route>
+        <Route path='/blog' element={<Blog/>}></Route>
+        <Route path='/blog/categories/recipes' element={<RecipesCategories/>}></Route>
+        <Route path='/blog/categories/what-is-keto' element={<WhatIsKetoCategories/>}></Route>
+        <Route path='/blog/categories/lifestyle' element={<LifestyleCategories/>}></Route>
       </Routes>
     </BrowserRouter>
   )

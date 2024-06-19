@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Header from '../../commons/header';
 import Footer from '../../commons/footer';
 import SearchOutlined from "@mui/icons-material/SearchOutlined";
@@ -8,8 +8,16 @@ import XIcon from '@mui/icons-material/X';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import LinkIcon from '@mui/icons-material/Link';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
+import OpenInFullOutlinedIcon from '@mui/icons-material/OpenInFullOutlined';
+import { useState } from "react";
 const Post = () => {
     const { postid } = useParams();
+    const [search, setSearch] = useState(false);
+    const [hover , setHover] = useState(false);
 
     return (
         <div className='relative '>
@@ -20,12 +28,20 @@ const Post = () => {
                         <div className='bg-white p-10'>
                             <div className="flex justify-between items-center pb-10">
                                 <div className="flex gap-4 items-center font-light">
-                                    <div> All Posts</div>
-                                    <div>Recipes</div>
-                                    <div>What is Keto?</div>
-                                    <div>Lifestyle</div>
+                                    <Link to={"/blog"}>All Posts</Link>
+                                    <Link to={"/blog/categories/recipes"}>Recipes</Link>
+                                    <Link to={"/blog/categories/what-is-keto"}>What is Keto?</Link>
+                                    <Link to={"/blog/categories/lifestyle"}>Lifestyle</Link>
                                 </div>
-                                <div><SearchOutlined /></div>
+                                <div>
+                                    {search ?
+                                        <div className='flex items-center border-b border-black '>
+                                            <SearchOutlined />
+                                            <input type="text" name="" placeholder='Search' id="" className='py-1 pl-2 w-full' />
+                                            <CloseOutlinedIcon onClick={() => { setSearch(false) }} />
+                                        </div> : <SearchOutlined onClick={() => { setSearch(true) }} />
+                                    }
+                                </div>
                             </div>
                             <div className="border border-gray-200 py-12 px-24">
                                 <div className="flex items-center gap-2 font-light">
@@ -36,9 +52,12 @@ const Post = () => {
                                     <div>.</div>
                                     <div>2 min read</div>
                                 </div>
-                                <div className="py-4 text-3xl text-slate-700">Good fat vs. bad fat </div>
+                                <div className="py-4 text-3xl text-slate-700">Good fat vs. bad fat {postid} </div>
                                 <div className="pb-4 text-lg font-bold font-sans">Create a blog post subtitle that summaries your post in a few short, punchy sentences and entices your audience to continue reading.</div>
-                                <img loading="lazy" src="https://static.wixstatic.com/media/5305c5_7ce56faed8ad4a4cbf0ee6c6b2019f55~mv2_d_3456_5184_s_4_2.jpg/v1/fill/w_925,h_1388,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5305c5_7ce56faed8ad4a4cbf0ee6c6b2019f55~mv2_d_3456_5184_s_4_2.jpg" alt="" />
+                                <div className="relative">
+                                    <img loading="lazy" src="https://static.wixstatic.com/media/5305c5_7ce56faed8ad4a4cbf0ee6c6b2019f55~mv2_d_3456_5184_s_4_2.jpg/v1/fill/w_925,h_1388,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5305c5_7ce56faed8ad4a4cbf0ee6c6b2019f55~mv2_d_3456_5184_s_4_2.jpg" alt="" onMouseEnter={()=>{setHover(true)}} onMouseLeave={() => setHover(false)} />
+                                    {hover && <OpenInFullOutlinedIcon fontSize="large" className="absolute top-4 right-4 text-slate-700 rounded-full bg-white opacity-50 p-1.5"/>}
+                                </div>
                                 <div className="text-lg font-light py-4">Welcome to your blog post. Use this space to connect with your readers and potential customers in a way that’s current and interesting. Think of it as an ongoing conversation where you can share updates about business, trends, news, and more. </div>
                                 <div>
                                     <div className="text-lg">Design with Ease</div>
@@ -79,6 +98,29 @@ const Post = () => {
                                         <div> 0 comments</div>
                                     </div>
                                     <FavoriteBorderIcon className="text-red-400" />
+                                </div>
+                            </div>
+                            <div className="flex justify-between items-center font-light py-10">
+                                <div>Recent Posts</div>
+                                <div>See All</div>
+                            </div>
+                            <div className="mb-10 border border-slate-200 w-[288px]">
+                                <img loading="lazy" style={{ width: '288px', height: '200px', objectFit: 'cover' }} src="https://static.wixstatic.com/media/5305c5_ef23e1c298c742e380f7ec489ec94880~mv2_d_3144_4183_s_4_2.jpg/v1/fill/w_360,h_203,al_c,lg_1,q_80,enc_auto/5305c5_ef23e1c298c742e380f7ec489ec94880~mv2_d_3144_4183_s_4_2.jpg" alt="" />
+                                <div className="p-4 text-xl">Your new Keto lifestyle: Everything you need to...</div>
+                                <div className="flex justify-between items-center border-t border-slate-200 m-4">
+                                    <div className="flex items-center gap-4 pt-4">
+                                        <div><VisibilityIcon fontSize="small" /> 0</div>
+                                        <div><ChatBubbleOutlineOutlinedIcon fontSize="small" /> 0</div>
+                                    </div>
+                                    <div className="pt-4">2 <FavoriteBorderOutlinedIcon fontSize="small" className="text-red-400" /></div>
+                                </div>
+                            </div>
+                            <div className="mb-10 border border-slate-200 px-20">
+                                <div className="border-b py-4 border-slate-200">Comments</div>
+                                <textarea name="" placeholder="Type your message here..." id="" className="py-1 pl-2 my-6 border border-black w-full" rows={3} ></textarea>
+                                <div className="flex justify-end gap-4 items-center pb-6">
+                                    <button className="px-3 py-1 text-sm">Cancel</button>
+                                    <button className={`bg-[#F4F3EF] hover:bg-black text-white text-sm px-3 py-1`}>Publish</button>
                                 </div>
                             </div>
                         </div>
