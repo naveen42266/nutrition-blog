@@ -21,10 +21,10 @@ const ShopMealPlans = () => {
                         <div className='bg-white text-center p-10'>
                             <div className='text-5xl font-bold text-[#107070] py-10'> Shop Meal Plans</div>
                             <p className='py-4'>For a balanced diet, start your day with Greek yogurt topped with honey, granola, and fresh berries, or scrambled eggs with spinach and whole wheat toast, or oatmeal with bananas and almond butter. Lunch options include a grilled chicken salad with mixed greens and balsamic vinaigrette, a quinoa bowl with black beans, corn, and avocado, or a turkey and avocado wrap with carrot sticks. For dinner, enjoy baked salmon with roasted Brussels sprouts and quinoa, spaghetti with marinara sauce and ground turkey, or stir-fried tofu with mixed vegetables and brown rice.</p>
-                            <div className='grid grid-cols-12 items-center gap-16 py-5' onMouseEnter={() => setHover({ id: 0, isHover: false })}>
+                            <div className='grid grid-cols-12 items-center gap-16 py-5'>
                                 {[1, 2, 3]?.map((each) => {
                                     return (
-                                        <div className='col-span-4' key={each} onMouseEnter={() => setHover({ id: each, isHover: true })} onMouseDown={() => setHover({ id: 0, isHover: false })}>
+                                        <div className='col-span-4' key={each} onMouseEnter={() => setHover({ id: each, isHover: true })} onMouseLeave={() => setHover({ id: 0, isHover: false })}>
                                             <div className='relative'>
                                                 <img className='w-full' loading="lazy" src="https://static.wixstatic.com/media/5305c5_f9ddc40b66ce4475a2b3509fb5e137f4~mv2_d_5995_4912_s_4_2.jpg/v1/fill/w_305,h_305,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5305c5_f9ddc40b66ce4475a2b3509fb5e137f4~mv2_d_5995_4912_s_4_2.jpg" alt="" />
                                                 <VerticalAlignBottomIcon fontSize='large' className='absolute top-4 right-4 text-slate-700 rounded-full bg-white opacity-50 p-1.5' />

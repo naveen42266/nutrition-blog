@@ -50,7 +50,7 @@ const Home = () => {
                                                     <AccountCircleIcon className='text-slate-500' fontSize='large' />
                                                     <div className='font-light text-sm'>
                                                         <div>Admin</div>
-                                                        <div className='flex'>May 16, 2024 <div className='px-3'>.</div> 2 min </div>
+                                                        <div className='flex items-center'>May 16, 2024 <div className="w-0.5 h-0.5 bg-black rounded-full mx-2"></div> 2 min </div>
                                                     </div>
                                                 </div>
                                                 <Link className='px-1 text-2xl font-bold text-[#107070] hover:text-black' to={`/post/${each}`}>Good fat vs. bad fat</Link>

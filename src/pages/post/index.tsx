@@ -47,9 +47,9 @@ const Post = () => {
                                 <div className="flex items-center gap-2 font-light">
                                     <div><Avatar /></div>
                                     <div> Admin</div>
-                                    <div>.</div>
+                                    <div className="w-0.5 h-0.5 bg-black rounded-full"></div>
                                     <div>May 16, 2023</div>
-                                    <div>.</div>
+                                    <div className="w-0.5 h-0.5 bg-black rounded-full"></div>
                                     <div>2 min read</div>
                                 </div>
                                 <div className="py-4 text-3xl text-slate-700">Good fat vs. bad fat {postid} </div>

@@ -15,7 +15,7 @@ const Footer = () => {
                 <div>Terms & Conditions</div>
             </div>
         </div>
-        <div className='py-5 text-white bg-[#107070] flex justify-center'>© 2035 by House of Keto. Powered and secured by <div className='underline pl-1'>Naveen</div></div>
+        <div className='py-5 text-white bg-[#107070] flex justify-center'>© 2024 by House of Keto. Powered and secured by <div className='underline pl-1'>Naveen</div></div>
     </>
 }
 
