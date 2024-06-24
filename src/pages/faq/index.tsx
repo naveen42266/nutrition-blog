@@ -98,8 +98,8 @@ const FAQ = () => {
                             <div className='font-light'>
                                 {handleListFaq()?.map((each: any, index) => {
                                     return (
-                                        <div key={index} className='py-6 border-b border-slate-200' onClick={() => { faq != index + 1 ? setFaq(index + 1) : setFaq(0) }}>
-                                            <div className='flex justify-between items-center cursor-pointer'>
+                                        <div key={index} className='py-6 border-b border-slate-200'>
+                                            <div className='flex justify-between items-center cursor-pointer' onClick={() => { faq != index + 1 ? setFaq(index + 1) : setFaq(0) }}>
                                                 <div>{each?.question}</div>
                                                 {faq == index + 1 ? <KeyboardArrowUpIcon fontSize='small' className='text-slate-500' /> : <KeyboardArrowDownIcon fontSize='small' className='text-slate-500' />}
                                             </div>
