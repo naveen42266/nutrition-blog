@@ -9,6 +9,7 @@ import XIcon from '@mui/icons-material/X';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import LinkIcon from '@mui/icons-material/Link';
 import { useState } from 'react';
+import TextField from '@mui/material/TextField/TextField';
 const faqList = [
     {
         'question': 'What is an FAQ section?',
@@ -79,10 +80,10 @@ const FAQ = () => {
                                     <div className='flex justify-end'>
                                         {search ?
                                             <div className='flex items-center border-b border-black '>
-                                                <SearchOutlined />
-                                                <input type="text" name="" placeholder='Search' id="" className='py-1 pl-2 w-full' />
-                                                <CloseOutlinedIcon onClick={() => { setSearch(false) }} />
-                                            </div> : <SearchOutlined onClick={() => { setSearch(true) }} />
+                                                <SearchOutlined className='cursor-pointer' />
+                                                <TextField id="standard-basic" className="ml-2 py-1" placeholder={'Search'} variant="standard" fullWidth InputProps={{ disableUnderline: true, }} />
+                                                <CloseOutlinedIcon className='cursor-pointer' onClick={() => { setSearch(false) }} />
+                                            </div> : <SearchOutlined className='cursor-pointer' onClick={() => { setSearch(true) }} />
                                         }
                                     </div>
                                 </div>
@@ -90,7 +91,7 @@ const FAQ = () => {
                             <div className='flex items-center gap-4 py-5'>
                                 {['General', 'Setting up FAQs']?.map((each) => {
                                     return (
-                                        <div key={each} className={`text-base ${selectedSection == each ? 'font-semibold' : 'font-light'}`} onClick={() => { setSelectedSection(each) }}>{each}</div>
+                                        <div key={each} className={`text-base ${selectedSection == each ? 'font-semibold' : 'font-light cursor-pointer'}`} onClick={() => { setSelectedSection(each) }}>{each}</div>
                                     )
                                 })}
                             </div>
@@ -98,7 +99,7 @@ const FAQ = () => {
                                 {handleListFaq()?.map((each: any, index) => {
                                     return (
                                         <div key={index} className='py-6 border-b border-slate-200' onClick={() => { faq != index + 1 ? setFaq(index + 1) : setFaq(0) }}>
-                                            <div className='flex justify-between items-center'>
+                                            <div className='flex justify-between items-center cursor-pointer'>
                                                 <div>{each?.question}</div>
                                                 {faq == index + 1 ? <KeyboardArrowUpIcon fontSize='small' className='text-slate-500' /> : <KeyboardArrowDownIcon fontSize='small' className='text-slate-500' />}
                                             </div>
@@ -113,10 +114,10 @@ const FAQ = () => {
                                                 })}
                                             </div>}
                                             {faq == index + 1 && <div className='flex gap-3'>
-                                                <FacebookIcon fontSize='small' />
-                                                <XIcon fontSize='small' />
-                                                <LinkedInIcon fontSize='small' />
-                                                <LinkIcon fontSize='small' className='-rotate-45' />
+                                                <FacebookIcon fontSize='small' className='cursor-pointer' />
+                                                <XIcon fontSize='small' className='cursor-pointer' />
+                                                <LinkedInIcon fontSize='small' className='cursor-pointer' />
+                                                <LinkIcon fontSize='small' className='cursor-pointer -rotate-45' />
                                             </div>}
                                         </div>
                                     )

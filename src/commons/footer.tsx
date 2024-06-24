@@ -6,7 +6,7 @@ const Footer = () => {
             <div className='text-center text-3xl font-sans font-bold pb-3 pt-6'>Subscribe to My Newsletter</div>
             <div className='flex  justify-center px-5 py-2 gap-3'>
                 <input type="email" name="" placeholder='Enter your email here*' id="" className='py-1 pl-2 w-[350px] border border-black' />
-                <button className='bg-[#107070] text-white py-1 px-6'>Subscribe Now</button>
+                <button className='bg-[#107070] hover:bg-slate-700 text-white py-1 px-6'>Subscribe Now</button>
             </div>
             <div className='flex justify-center items-center gap-5 pt-10'>
                 <Link to={'/faq'}>FAQ</Link>

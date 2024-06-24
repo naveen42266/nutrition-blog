@@ -99,17 +99,17 @@ const Home = () => {
                             <div className='mt-[30px] bg-[#107070] text-white py-5'>
                                 <div className='pb-3 text-center '>YOU CAN ALSO FIND ME ON </div>
                                 <div className='flex justify-center items-center gap-6'>
-                                    <FacebookIcon />
-                                    <TwitterIcon />
-                                    <PinterestIcon />
-                                    <InstagramIcon />
+                                    <FacebookIcon className='cursor-pointer'/>
+                                    <TwitterIcon className='cursor-pointer'/>
+                                    <PinterestIcon className='cursor-pointer'/>
+                                    <InstagramIcon className='cursor-pointer'/>
                                 </div>
                             </div>
                             <div className='my-[30px] text-[#107070] bg-white py-5'>
                                 <div className='text-center'>SUBSCRIBE TO MY NEWSLETTER</div>
                                 <div className='flex flex-col justify-center px-5 py-2 gap-3'>
                                     <input type="email" name="" placeholder='Enter your email here*' id="" className='py-1 pl-2 border border-black' />
-                                    <button className='bg-[#107070] text-white py-1'>Subscribe Now</button>
+                                    <button className='bg-[#107070] hover:bg-slate-700 text-white py-1'>Subscribe Now</button>
                                 </div>
                             </div>
                         </div>
@@ -128,7 +128,7 @@ const Home = () => {
                                 ))}
                             </div>
                             {visibleCount < allItems.length && (
-                                <div className='pt-[35px] pb-[50px] flex justify-center items-center'>
+                                <div className='pt-[35px] pb-[50px] flex justify-center items-center cursor-pointer'>
                                     <button className='text-[#107070] hover:text-white hover:bg-[#107070] text-center border border-[#107070] py-2 px-10' onClick={handleLoadMore} > LOAD MORE </button>
                                 </div>
                             )}

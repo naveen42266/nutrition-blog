@@ -4,6 +4,7 @@ import SearchOutlined from "@mui/icons-material/SearchOutlined";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import TextField from '@mui/material/TextField/TextField';
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 const Blog = () => {
@@ -32,7 +33,7 @@ const Blog = () => {
                                     {search ?
                                         <div className='flex items-center border-b border-black '>
                                             <SearchOutlined />
-                                            <input type="text" name="" placeholder='Search' id="" className='py-1 pl-2 w-full' />
+                                            <TextField id="standard-basic" className="ml-2 py-1" placeholder={'Search'} variant="standard" fullWidth InputProps={{ disableUnderline: true, }} />
                                             <CloseOutlinedIcon onClick={() => { setSearch(false) }} />
                                         </div> : <SearchOutlined onClick={() => { setSearch(true) }} />
                                     }
