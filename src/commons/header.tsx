@@ -16,7 +16,7 @@ const Header = () => {
     }
     return (
         <div className='fixed top-0 left-0 right-0 z-20 flex justify-center'>
-            <div className='flex justify-between items-center font-light bg-white w-[90%] p-8 shadow-md'>
+            <div className='flex justify-between items-center font-light bg-white w-[90%] p-8'> {/*shadow-md*/}
                 <div className='flex flex-col justify-start'>
                     <div className='text-3xl flex font-normal'>
                         House<div className='italic px-2'>of</div>Keto

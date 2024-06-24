@@ -12,6 +12,9 @@ import Blog from './pages/blog';
 import RecipesCategories from './pages/blog/categories/recipes';
 import WhatIsKetoCategories from './pages/blog/categories/what-is-keto';
 import LifestyleCategories from './pages/blog/categories/lifestyle';
+import FAQ from './pages/faq';
+import DownloadsAndRefunds from './pages/downloadsAndRefunds';
+import TermsAndConditions from './pages/termsAndConditions';
 
 function App() {
   return (
@@ -29,6 +32,9 @@ function App() {
         <Route path='/blog/categories/recipes' element={<RecipesCategories/>}></Route>
         <Route path='/blog/categories/what-is-keto' element={<WhatIsKetoCategories/>}></Route>
         <Route path='/blog/categories/lifestyle' element={<LifestyleCategories/>}></Route>
+        <Route path='/faq' element={<FAQ/>}></Route>
+        <Route path='/downloads-and-refunds' element={<DownloadsAndRefunds/>}></Route>
+        <Route path='/terms-and-conditions' element={<TermsAndConditions/>}></Route>
       </Routes>
     </BrowserRouter>
   )
