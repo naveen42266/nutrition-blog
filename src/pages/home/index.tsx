@@ -31,7 +31,7 @@ const Home = () => {
                 {/* Full-Screen Background with Overlay */}
                 <div className='absolute top-0 left-0 right-0'>
                     <div className="relative z-10 flex flex-col items-start justify-end h-screen text-white px-[250px] py-[100px] overflow-y-auto">
-                        <img loading="lazy" src='https://static.wixstatic.com/media/5305c5_1644b8eb4f0d4ed7bf307cb7d2a6ab28~mv2_d_6000_4000_s_4_2.jpeg/v1/fill/w_980,h_940,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5305c5_1644b8eb4f0d4ed7bf307cb7d2a6ab28~mv2_d_6000_4000_s_4_2.jpeg' alt="Background Image" className="absolute inset-0 w-full h-full object-cover bg-black opacity-50" />
+                        <img loading="lazy" src='https://static.wixstatic.com/media/5305c5_1644b8eb4f0d4ed7bf307cb7d2a6ab28~mv2_d_6000_4000_s_4_2.jpeg/v1/fill/w_980,h_940,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5305c5_1644b8eb4f0d4ed7bf307cb7d2a6ab28~mv2_d_6000_4000_s_4_2.jpeg' alt="Background Image" className="absolute inset-0 w-full h-full object-cover " />
                         {/* "https://static.vecteezy.com/system/resources/previews/035/509/867/large_2x/ai-generated-food-waste-still-life-as-a-concept-of-healthy-nutrition-free-photo.jpg" */}
                         <div className="relative z-10">
                             <h1 className="text-6xl font-bold w-[60%]">Welcome to the House of Keto</h1>
@@ -82,7 +82,7 @@ const Home = () => {
                             <div className='bg-white p-5'>
                                 <div className='text-5xl font-bold text-[#107070]'>Chris Bumstead</div>
                                 <p className='py-4 font-light'>Christopher Adam Bumstead, known by his fans as CBum, is a Canadian IFBB Pro League professional bodybuilder. Bumstead is the reigning five-time Mr. Olympia Classic Physique Champion, winning five consecutive titles from 2019 to 2023.</p>
-                                <Link to={''}><div className='py-2 underline text-[#107070]'>READ MORE</div></Link>
+                                <Link to={'/about'}><div className='py-2 underline text-[#107070]'>READ MORE</div></Link>
                             </div>
                             <div className="relative bg-cover bg-no-repeat bg-center h-[300px] mt-[30px] overflow-hidden shadow-md">
                                 <img
